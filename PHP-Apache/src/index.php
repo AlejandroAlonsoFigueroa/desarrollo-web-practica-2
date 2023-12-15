@@ -63,7 +63,7 @@
                             <td><?php echo $row['direccion']; ?></td>
                             <td><?php echo $row['telefono']; ?></td>
                             <td style = "padding: 0;">
-                                <form action = "borrarEmpleado.php" method = "POST">
+                                <form action = "eliminarEmpleado.php" method = "POST">
                                     <input type = "hidden" name = "clave" value = "<?php echo $row['clave']; ?>"/>
                                     <button style = "padding: 0;"class = "boton-borrar" type = "submit">Eliminar</button>
                                 </form>
