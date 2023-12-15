@@ -35,6 +35,19 @@
         </form>
     </div>
         <?php 
+            function obtenerConexionBBDD(){
+                $ip = "pgsql:host=172.17.0.2;port=5432;dbname=postgres;";
+                $username = "postgres";
+                $password = "ajxy2381";
+                try {
+                    $pdo = new PDO($ip, $username, $password);
+                    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                    return $pdo;
+                } catch (PDOException $e) {
+                    die('Error en la conexión a la base de datos: ' . $e->getMessage());
+                }
+            }
+    
             function obtenerEmpleados(){
                 $sql = "SELECT clave, nombre, direccion, telefono FROM empleado";
                 $conexion =  obtenerConexionBBDD();
