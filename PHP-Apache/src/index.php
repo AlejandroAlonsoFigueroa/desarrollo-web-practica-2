@@ -13,8 +13,16 @@
 
             <div>
                 <div>
+            </div>
+            <div>
+                <div>
                     <h1>Empleados registrados</h1>
                 </div>
+            </div>
+            <div>
+                <table>
+                    <tr></tr>
+                </table>
             </div>
         </div>
     </body>
