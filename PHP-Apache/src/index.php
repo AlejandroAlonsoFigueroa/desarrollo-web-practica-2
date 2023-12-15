@@ -56,7 +56,21 @@
             </div>
             <div>
                 <table>
-                    <tr></tr>
+                    <?php foreach(obtenerEmpleados() as $row){ ?>
+                        <tr>
+                            <td><?php echo $row['clave']; ?></td>
+                            <td><?php echo $row['nombre']; ?></td>
+                            <td><?php echo $row['direccion']; ?></td>
+                            <td><?php echo $row['telefono']; ?></td>
+                            <td style = "padding: 0;">
+                                <form action = "borrarEmpleado.php" method = "POST">
+                                    <input type = "hidden" name = "clave" value = "<?php echo $row['clave']; ?>"/>
+                                    <button style = "padding: 0;"class = "boton-borrar" type = "submit">Eliminar</button>
+                                </form>
+                            </td>
+                            <td onClick = "mostrarFormActualizar('<?php echo $row['clave']; ?>', '<?php echo $row['nombre']; ?>', '<?php echo $row['direccion']; ?>', '<?php echo $row['telefono']; ?>')">Editar<?php  ?></td>
+                        </tr>
+                    <?php }?> 
                 </table>
             </div>
         </div>
