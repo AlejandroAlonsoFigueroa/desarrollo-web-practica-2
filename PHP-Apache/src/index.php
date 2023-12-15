@@ -74,5 +74,35 @@
                 </table>
             </div>
         </div>
+
+
+        <!-- Formulario para actualziar los empleados -->
+        <div id ="contenedor-absoluto" style = "display: none; position: absolute; top: 0; left: 0; background-color: grey; width: 100%; height: 100%;">
+           <div style = "background-color: white; width: fit-content; padding: 50px; margin: 0 auto;">
+                    <form action = "actualizarEmpleado.php" method = "POST">
+                        <div>
+                            <div>
+                                <div><p>Clave</p></div>
+                                <div><input id = "fClave" type = "number" name = "clave" required readonly/></div>
+                            </div>
+                            <div>
+                            <div><p>Nombre</p></div>
+                                <div><input id = "fNombre" type = "text" name = "nombre"required/></div>
+                            </div>
+                            <div>
+                                <div><p>Dirección</p></div>
+                                <div><input id = "fDireccion" type = "text" name = "direccion" required/></div>
+                            </div>
+                            <div>
+                                <div><p>Teléfono</p></div>
+                                <div><input id = "fTelefono" type = "text" name = "telefono" required/></div>
+                            </div>
+                        </div>
+                        <div style = "margin-top: 10px;">
+                            <button type = "submit">Editar empleado</button>
+                        </div>
+                    </form>
+           </div> 
+        </div>
     </body>
 </html>
